@@ -1,6 +1,6 @@
 const moongose = require('mongoose');
 
-moongose.connect('mongodb+srv://Bhagya:Infy@123@cluster0-jb1vx.mongodb.net/userDB?retryWrites=true&w=majority',
+moongose.connect(process.env.MONGODB_URL,
     { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
         if (!err)
             console.log("Mongo DB connection Succeeded ...");

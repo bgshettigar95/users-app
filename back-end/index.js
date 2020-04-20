@@ -8,8 +8,9 @@ const userController = require('./userController');
 var app = express();
 app.use(bodyParser.json());
 
-app.use(cors({ origin: 'http://localhost:4200' }))
-
-app.listen(3000, () => console.log("Server Started at port 3000"));
+app.use(cors({ origin: process.env.FRONTEND_DOMAIN }))
 
 app.use('/users', userController);
+
+app.listen(process.env.PORT, () => console.log("Server Started at port 3000"));
+
