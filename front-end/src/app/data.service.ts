@@ -11,7 +11,7 @@ export class DataService {
 
 
   users: User[];
-  baseUrl = "http://localhost:3000/users";
+  baseUrl = "https://user-management-tool.herokuapp.com/users";
 
 
 
