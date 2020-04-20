@@ -8,7 +8,7 @@ const userController = require('./userController');
 var app = express();
 app.use(bodyParser.json());
 
-app.use(cors({ origin: process.env.FRONTEND_DOMAIN }))
+app.use(cors())
 
 app.use('/users', userController);
 
